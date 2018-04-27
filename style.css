@@ -1,0 +1,76 @@
+
+.banner {
+    background-color: #66c2ff;
+    margin-bottom: 0px;
+    padding-left: 220px;
+}
+
+.centered {
+   text-align: center;
+}
+
+.wrapper{
+	display:grid;
+	grid-template-columns:repeat(2, 1fr);
+	grid-gap: 0px;
+	grid-auto-rows:minmax(40px, auto);
+	margin-bottom: 20px;
+}
+
+.wrapper div{
+	border-radius: 40px 20px;
+	border:1px solid #ccc;
+	border-top: 0px;
+	padding:30px;
+	text-align: center;
+}
+
+.one{
+
+	grid-column: 1;
+	grid-row: 1;
+	background: linear-gradient(to bottom right, white, #ddd);
+	border-top: 1px solid #ccc !important;
+}
+.two{
+
+	grid-column: 2;
+	grid-row: 1;
+	/*background: linear-gradient(to bottom right, white, #ddd);*/
+	border-top: 1px solid #ccc !important;
+}
+.three{
+
+	grid-column: 1;
+	grid-row: 2;
+	/*background: linear-gradient(to bottom right, white, #ddd);*/
+	border-top: 1px solid #ccc !important;
+}
+.four{
+
+	grid-column: 2;
+	grid-row: 2;
+	background: linear-gradient(to bottom right, white, #ddd);*/
+	border-top: 1px solid #ccc !important;
+}
+.five{
+
+	grid-column: 1;
+	grid-row: 3;
+	background: linear-gradient(to bottom right, white, #ddd);
+	border-top: 1px solid #ccc !important;
+}
+
+.results{
+	background: transparent;
+	
+}
+.result-containers{
+	margin-bottom: 200px;
+}
+
+span{
+	font-size: 40px;
+	color: #66c2ff;
+	font-weight: bold;
+}
