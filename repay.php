@@ -5,12 +5,12 @@
 			//Initializing variables from user input
 			$start_date = $_POST['start_date'];
 			$loan_amount = $_POST['loan_amount'];
-			$ins_amount = $_POST['ins_amount'];
+			// $ins_amount = $_POST['ins_amount'];
 			$int_rate = $_POST['int_rate'];
 			$ins_interval = $_POST['ins_interval'];
 			$months = $_POST['months'];
 
-			if (empty($start_date) || empty($loan_amount) || empty($ins_amount) || empty($int_rate) || empty($months)){
+			if (empty($start_date) || empty($loan_amount) || empty($int_rate) || empty($months)){
 					header("Location: ../repay_calc/index.php?repay=empty");
 					exit();
 			}
