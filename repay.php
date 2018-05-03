@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 		if (isset($_POST['submit'])){
 
@@ -14,18 +14,7 @@
 					header("Location: ../repay_calc/index.php?repay=empty");
 					exit();
 			}
-			// else{
-				
-			// 	if(!is_numeric($loan_amount) || !is_numeric($ins_amount) || !is_numeric($int_rate) || !is_numeric($months)) {
-
-			// 		header("Location: ../repay_calc/index.php?repay=numeric");
-			// 		exit();
-
-		 //    		// $msg = '<span class="error"> Data entered was not numeric</span>';
-			// 	}
-			// }
-
-			//Converting rate to decimal
+						//Converting rate to decimal
 			$final_rate = ($int_rate / 100);
 
 			//Monthly payment calculations
@@ -43,33 +32,7 @@
 			//Daily payment calculation
 			$daily_payment =(($final_rate / 365) + ($final_rate / 365) / (pow(1+($final_rate / 365),$months) -1)) * $loan_amount;
 
-			// if ($ins_interval == "Monthly"){
 
-			// 	setlocale(LC_MONETARY,"en_US");
-			// 	echo "Monthly Payments: " . money_format("US$ %i", $monthly_payment) . "<br>";
-			// 	echo "Loan Amount: " . money_format("US$ %i", $loan_amount) . "<br>";
-			// 	echo "Total Interest: " . money_format("US$ %i", $total_interest) . "<br>";
-			// 	echo "Total to be repaid: " . money_format("US$ %i", $total_tobepaid) . "<br>";
-			// 	echo "Estimated payoff date: " . $newdate. "<br>";
 
-			// }
-
-			// elseif ($ins_interval == "Weekly") {
-
-			// 	echo "Weekly Payments: " . round($weekly_payment, 2). "<br>";
-			// 	echo "Loan Amount: " . $loan_amount . "<br>";
-			// 	echo "Total Interest: " . round($total_interest,2) . "<br>";
-			// 	echo "Total to be repaid: " . round($total_tobepaid, 2) . "<br>";
-			// 	echo "Estimated payoff date: " . $newdate. "<br>";
-			// }
-
-			// elseif ($ins_interval == "Daily") {
-
-			// 	echo "Daily Payments: " . round($daily_payment, 2). "<br>";
-			// 	echo "Loan Amount: " . $loan_amount . "<br>";
-			// 	echo "Total Interest: " . round($total_interest,2) . "<br>";
-			// 	echo "Total to be repaid: " . round($total_tobepaid, 2) . "<br>";
-			// 	echo "Estimated payoff date: " . $newdate. "<br>";
-			// }
 		}
 	?>
